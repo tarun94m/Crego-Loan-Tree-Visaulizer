@@ -1,0 +1,196 @@
+<<<<<<< HEAD
+@import '@xyflow/react/dist/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@xyflow/react/dist/style.css';
+>>>>>>> 8571d5e22948fcf331fefa2600344b4d5989035e
+
+/* Professional Financial App Design System */
+@layer base {
+  :root {
+    /* Main palette - Professional blues and grays */
+    --background: 218 23% 98%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary - Professional blue */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 50%;
+
+    /* Secondary - Light blue */
+    --secondary: 213 27% 84%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 213 27% 94%;
+    --muted-foreground: 215 13% 65%;
+
+    --accent: 213 27% 94%;
+    --accent-foreground: 215 25% 27%;
+
+    /* Success green for nodes */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 45% 90%;
+
+    /* Warning orange for nodes */
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 25 100% 95%;
+
+    /* Info purple for nodes */
+    --info: 262 83% 58%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 262 50% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 84% 56%;
+
+    --radius: 0.75rem;
+
+    /* Node-specific colors */
+    --node-account: 214 84% 56%;
+    --node-account-light: 214 84% 95%;
+    --node-loan: 142 76% 36%;
+    --node-loan-light: 142 45% 90%;
+    --node-collateral: 25 95% 53%;
+    --node-collateral-light: 25 100% 95%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 84% 56%) 0%, hsl(214 84% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 30%) 100%);
+    --gradient-warning: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(25 95% 47%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-node: 0 4px 12px hsl(215 25% 27% / 0.15);
+
+    /* Transitions */
+    --transition-all: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Professional dark theme */
+    --background: 222 22% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 22% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 22% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark mode primary */
+    --primary: 214 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 56%;
+
+    --secondary: 217 15% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 15% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 15% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --success: 142 76% 40%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 20% 15%;
+
+    --warning: 25 95% 57%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 25 30% 15%;
+
+    --info: 262 83% 62%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 262 25% 15%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 15% 20%;
+    --input: 217 15% 20%;
+    --ring: 214 84% 60%;
+
+    /* Dark mode node colors */
+    --node-account: 214 84% 60%;
+    --node-account-light: 214 50% 15%;
+    --node-loan: 142 76% 40%;
+    --node-loan-light: 142 30% 15%;
+    --node-collateral: 25 95% 57%;
+    --node-collateral-light: 25 40% 15%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom React Flow Styling */
+.react-flow__node {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-node);
+  border: 2px solid transparent;
+  transition: var(--transition-all);
+}
+
+.react-flow__node:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.react-flow__node.selected {
+  border-color: hsl(var(--primary));
+}
+
+.react-flow__edge {
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected {
+  stroke: hsl(var(--primary));
+}
