@@ -1,16 +1,10 @@
-<<<<<<< HEAD
+
 @import '@xyflow/react/dist/style.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-=======
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import '@xyflow/react/dist/style.css';
->>>>>>> 8571d5e22948fcf331fefa2600344b4d5989035e
 
 /* Professional Financial App Design System */
 @layer base {
